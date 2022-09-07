@@ -17,7 +17,9 @@ public abstract class Employee {
     }
 
     public void setName(String employeeName){
-        this.name = employeeName;
+        if (employeeName != "") {
+            this.name = employeeName;
+        }
     }
 
     public String getNin(){
@@ -35,8 +37,10 @@ public abstract class Employee {
         this.salary = employeeSalary;
     }
 
-    public void raiseSalary(double raise){
-        this.salary += raise;
+    public void raiseSalary(double raise) {
+        if (this.salary + raise >= 0) {
+            this.salary += raise;
+        }
     }
 
     public void payBonus(){

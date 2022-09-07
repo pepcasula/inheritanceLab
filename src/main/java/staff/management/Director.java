@@ -16,4 +16,9 @@ public class Director extends Manager {
     public void setBudget(double directorBudget){
         this.budget = directorBudget;
     }
+
+    @Override
+    public void payBonus(){
+        this.salary *=1.02;
+    }
 }
